@@ -1,0 +1,12 @@
+D:\IUTMedical-DBMS\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.exe.config
+D:\IUTMedical-DBMS\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.exe
+D:\IUTMedical-DBMS\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.pdb
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.AssemblyReference.cache
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.SuggestedBindingRedirects.cache
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Form1.resources
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Properties.Resources.resources
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.GenerateResource.cache
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.CoreCompileInputs.cache
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.exe
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.pdb
+D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.StudentDashBoard.resources
