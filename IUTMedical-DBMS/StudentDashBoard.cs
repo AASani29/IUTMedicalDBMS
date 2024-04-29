@@ -10,36 +10,16 @@ using System.Windows.Forms;
 
 namespace IUTMedical_DBMS
 {
-    public partial class StudentDashBoard : Form
+    public partial class StudentDashboard : Form
     {
-        public StudentDashBoard()
+        public StudentDashboard()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void StudentDashboard_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
