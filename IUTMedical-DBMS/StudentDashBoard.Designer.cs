@@ -95,6 +95,7 @@
             this.button7.TabIndex = 41;
             this.button7.Text = "Profile";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox4
             // 
@@ -193,11 +194,12 @@
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 36;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::IUTMedical_DBMS.Properties.Resources.HeroImg;
-            this.pictureBox5.Location = new System.Drawing.Point(278, -19);
+            this.pictureBox5.Location = new System.Drawing.Point(267, 0);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(1459, 849);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,7 +217,9 @@
             this.Controls.Add(this.pictureBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StudentDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentDashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.StudentDashboard_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

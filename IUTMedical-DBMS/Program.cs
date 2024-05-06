@@ -16,7 +16,28 @@ namespace IUTMedical_DBMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Create an instance of the student dashboard form
+            StudentDashboard studentDashboardForm = new StudentDashboard();
+
+            // Create an instance of the login form
+            Form1 loginForm = new Form1();
+
+            // Show the login form as a dialog
+            if (loginForm.ShowDialog() == DialogResult.OK) // Assuming DialogResult.OK is set when login is successful
+            {
+                // If login is successful, hide the login form and show the student dashboard form
+                loginForm.Hide();
+                Application.Run(studentDashboardForm);
+            }
+            else
+            {
+                // Handle the case where login is not successful
+                // For example, you might want to exit the application or show an error message
+                Application.Exit(); // Exit the application if login is not successful
+            }
         }
+
+
     }
 }

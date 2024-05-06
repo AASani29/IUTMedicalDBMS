@@ -153,6 +153,16 @@ namespace IUTMedical_DBMS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap refund {
+            get {
+                object obj = ResourceManager.GetObject("refund", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap you_guys_are_getting_paid {
             get {
                 object obj = ResourceManager.GetObject("you-guys-are-getting-paid", resourceCulture);

@@ -10,3 +10,44 @@ D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.CoreCompileI
 D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.exe
 D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.pdb
 D:\IUTMedical-DBMS\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.StudentDashBoard.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.exe.config
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.exe
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\IUTMedical-DBMS.pdb
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.AssemblyReference.cache
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.SuggestedBindingRedirects.cache
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Form1.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Profile.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Properties.Resources.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.ScheduleAppointment.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.StudentDashboard.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.GenerateResource.cache
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.CoreCompileInputs.cache
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.exe
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.pdb
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.ViewRecords.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.DueTracker.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Buffers.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Formats.Asn1.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Memory.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Numerics.Vectors.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Text.Encodings.Web.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Text.Json.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.ValueTuple.dll
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Buffers.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Formats.Asn1.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Memory.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Numerics.Vectors.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Text.Encodings.Web.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Text.Json.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.ValueTuple.xml
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.CopyComplete
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Register.resources

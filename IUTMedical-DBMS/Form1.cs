@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bus_Reservation_System;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace IUTMedical_DBMS
 {
     public partial class Form1 : Form
     {
+        Database db = Database.GetInstance();
         public Form1()
         {
             InitializeComponent();
@@ -19,17 +22,86 @@ namespace IUTMedical_DBMS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
 
+            db.LoadDriverInfo();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+           // Hide();
+           // new RegForm().Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string enteredUsername = uname_tb.Text;
+                string enteredPassword = pass_tb.Text;
+
+                // Assuming db is an instance of your Database class that encapsulates Oracle connection and operations
+                Database db = Database.GetInstance();
+                OracleConnection connection = db.Connection; 
+
+                // Query the database to retrieve the user record with the entered username
+                string query = "SELECT Password FROM Users WHERE Username = :Username";
+                OracleCommand command = new OracleCommand(query, connection);
+                command.Parameters.Add(":Username", OracleDbType.NVarchar2).Value = enteredUsername;
+
+                // Execute the query and retrieve the password from the database
+                connection.Open();
+                string storedPassword = (string)command.ExecuteScalar();
+                connection.Close();
+
+                // Compare the entered password with the stored password
+                if (storedPassword != null && storedPassword == enteredPassword)
+                {
+                   
+                     MessageBox.Show("Login successful!");
+
+                    //this.Close();
+                    // Proceed with further actions, such as opening a new form or granting access
+                    StudentDashboard studentDashboardForm = new StudentDashboard();
+                    studentDashboardForm.Show();
+                    
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password. Please try again.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred during login: " + ex.Message);
+            }
+
+            //if (db.VerifyPass(username,password))
+            //{
+            //    // Redirect to the next page or show a new form
+            //    // For example:
+            //    StudentDashboard nextPage = new StudentDashboard();
+            //    nextPage.Show();
+
+            //    // Hide current login form if needed
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Invalid username or password. Please try again.");
+            //}
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
