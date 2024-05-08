@@ -16,5 +16,11 @@ namespace IUTMedical_DBMS
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AppointmentList appointmentList = new AppointmentList();
+            appointmentList.Show();
+        }
     }
 }

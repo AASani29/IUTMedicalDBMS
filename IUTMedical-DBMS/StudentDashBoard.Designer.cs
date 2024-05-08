@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -97,16 +97,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::IUTMedical_DBMS.Properties.Resources.money;
-            this.pictureBox4.Location = new System.Drawing.Point(41, 369);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(38, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 38;
-            this.pictureBox4.TabStop = false;
-            // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Cross;
@@ -123,16 +113,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::IUTMedical_DBMS.Properties.Resources.prescription;
-            this.pictureBox3.Location = new System.Drawing.Point(41, 263);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 36;
-            this.pictureBox3.TabStop = false;
-            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Cross;
@@ -148,6 +128,42 @@
             this.button2.Text = "View Records";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(86, 154);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Appointment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::IUTMedical_DBMS.Properties.Resources.money;
+            this.pictureBox4.Location = new System.Drawing.Point(41, 369);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::IUTMedical_DBMS.Properties.Resources.prescription;
+            this.pictureBox3.Location = new System.Drawing.Point(41, 263);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 36;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -168,22 +184,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(86, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Appointment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 

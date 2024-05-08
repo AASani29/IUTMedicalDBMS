@@ -26,6 +26,8 @@ D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.Threading.Tasks.Exten
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\bin\Debug\System.ValueTuple.xml
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.AssemblyReference.cache
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical-DBMS.csproj.SuggestedBindingRedirects.cache
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.AppointmentList.resources
+D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Doctor_sDashboard.resources
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.DueTracker.resources
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Form1.resources
 D:\IUTMedical-DBMS - Copy\IUTMedical-DBMS\obj\Debug\IUTMedical_DBMS.Register.resources

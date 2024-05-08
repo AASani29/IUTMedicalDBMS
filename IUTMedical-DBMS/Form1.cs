@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,58 +42,86 @@ namespace IUTMedical_DBMS
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Database db = Database.GetInstance();
+            OracleConnection connection = db.Connection;
             try
             {
                 string enteredUsername = uname_tb.Text;
                 string enteredPassword = pass_tb.Text;
 
-                // Assuming db is an instance of your Database class that encapsulates Oracle connection and operations
-                Database db = Database.GetInstance();
-                OracleConnection connection = db.Connection;
-
-                // Query the database to retrieve the user record with the entered username
-                string query = "SELECT UserID, Password FROM Users WHERE Username = :Username";
-                OracleCommand command = new OracleCommand(query, connection);
-                command.Parameters.Add(":Username", OracleDbType.NVarchar2).Value = enteredUsername;
-
-                // Execute the query and retrieve the password and user ID from the database
-                connection.Open();
-                OracleDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                if (enteredUsername == "doctor1" && enteredPassword == "doctor1")
                 {
-                    string storedPassword = reader.GetString(1);
-                    int userId = reader.GetInt32(0); // Retrieve user ID from the database
+                    db.LoggedInUserId = 21;
+                    
+                    MessageBox.Show("Login successful as a Doctor!"+db.LoggedInUserId);
+                    Doctor_sDashboard doctor_SDashboard = new Doctor_sDashboard();
+                    doctor_SDashboard.Show();
+                    this.Hide();
 
-                    // Compare the entered password with the stored password
-                    if (storedPassword != null && storedPassword == enteredPassword)
-                    {
-                        // Store the user ID in the Database class instance
-                        db.LoggedInUserId = userId;
 
-                        MessageBox.Show("Login successful !"+ userId);
+                }
+                else if(enteredUsername == "doctor2" && enteredPassword == "doctor2")
+                {
+                    db.LoggedInUserId = 22;
 
-                        // Proceed with further actions, such as opening a new form or granting access
-                        StudentDashboard studentDashboardForm = new StudentDashboard();
-                        studentDashboardForm.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password. Please try again.");
-                    }
+                    MessageBox.Show("Login successful as a Doctor!"+db.LoggedInUserId);
+                    Doctor_sDashboard doctor_SDashboard = new Doctor_sDashboard();
+                    doctor_SDashboard.Show();
+                    this.Hide();
+
                 }
                 else
                 {
-                    MessageBox.Show("User not found. Please check your username.");
-                }
 
-                connection.Close();
+                    // Assuming db is an instance of your Database class that encapsulates Oracle connection and operations
+                   
+
+                    // Query the database to retrieve the user record with the entered username
+                    string query = "SELECT UserID, Password FROM Users WHERE Username = :Username";
+                    OracleCommand command = new OracleCommand(query, connection);
+                    command.Parameters.Add(":Username", OracleDbType.NVarchar2).Value = enteredUsername;
+
+                    // Execute the query and retrieve the password and user ID from the database
+                    connection.Open();
+                    OracleDataReader reader = command.ExecuteReader();
+
+
+                    if (reader.Read())
+                    {
+                        string storedPassword = reader.GetString(1);
+                        int userId = reader.GetInt32(0); // Retrieve user ID from the database
+
+                        // Compare the entered password with the stored password
+                        if (storedPassword != null && storedPassword == enteredPassword)
+                        {
+                            // Store the user ID in the Database class instance
+                            db.LoggedInUserId = userId;
+
+                            MessageBox.Show("Login successful !" + userId);
+
+                            // Proceed with further actions, such as opening a new form or granting access
+                            StudentDashboard studentDashboardForm = new StudentDashboard();
+                            studentDashboardForm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password. Please try again.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("User not found. Please check your username.");
+                    }
+
+                    connection.Close();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred during login: " + ex.Message);
             }
+        
 
             //if (db.VerifyPass(username,password))
             //{

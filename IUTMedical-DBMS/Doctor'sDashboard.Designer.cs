@@ -83,10 +83,11 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(86, 154);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 71);
+            this.button1.Size = new System.Drawing.Size(187, 100);
             this.button1.TabIndex = 0;
             this.button1.Text = "View Appointment";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 

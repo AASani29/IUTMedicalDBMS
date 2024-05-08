@@ -32,9 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -90,21 +90,6 @@
             this.button7.Text = "Profile";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(86, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 71);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "View Appointment";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::IUTMedical_DBMS.Properties.Resources.appointment;
@@ -124,6 +109,21 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(86, 154);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(187, 71);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "View Appointment";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -148,6 +148,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(814, 267);
             this.dataGridView1.TabIndex = 93;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox1
             // 

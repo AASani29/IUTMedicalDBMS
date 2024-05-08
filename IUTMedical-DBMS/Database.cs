@@ -225,6 +225,41 @@ namespace Bus_Reservation_System
             }
             return appointments;
         }
+        public List<Appointment> GetAllAppointments()
+        {
+            List<Appointment> appointments = new List<Appointment>();
+            try
+            {
+                con.Open();
+                string sql = "SELECT AppointmentID, DateTime, Doctor, Reason FROM Appointments where doctorid=" + LoggedInUserId;
+                OracleCommand command = new OracleCommand(sql, con);
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int appointmentID = reader.GetInt32(reader.GetOrdinal("AppointmentID"));
+                    DateTime dateTime = reader.GetDateTime(reader.GetOrdinal("DateTime"));
+                    string doctor = reader.GetString(reader.GetOrdinal("Doctor"));
+                    string reason = reader.GetString(reader.GetOrdinal("Reason"));
+
+                    Appointment appointment = new Appointment(appointmentID, dateTime, doctor, reason);
+                    appointments.Add(appointment);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while fetching appointments: {ex.Message}");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return appointments;
+        }
+
 
         public List<string> GetUserNameById()
         {
