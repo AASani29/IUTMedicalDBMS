@@ -47,9 +47,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.uname_tb = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.docNamedb = new System.Windows.Forms.TextBox();
+            this.timeTb = new System.Windows.Forms.TextBox();
+            this.reasontb = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -74,11 +74,13 @@
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,6 +129,7 @@
             this.button7.TabIndex = 41;
             this.button7.Text = "Profile";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox4
             // 
@@ -152,6 +155,7 @@
             this.button3.TabIndex = 37;
             this.button3.Text = "Due Tracker";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox3
             // 
@@ -177,6 +181,7 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "View Records";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -212,6 +217,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Appointment";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -296,31 +302,35 @@
             this.uname_tb.Name = "uname_tb";
             this.uname_tb.Size = new System.Drawing.Size(635, 26);
             this.uname_tb.TabIndex = 45;
+            this.uname_tb.TextChanged += new System.EventHandler(this.uname_tb_TextChanged);
             // 
-            // textBox6
+            // docNamedb
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(561, 190);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(635, 26);
-            this.textBox6.TabIndex = 46;
+            this.docNamedb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.docNamedb.Location = new System.Drawing.Point(561, 190);
+            this.docNamedb.Name = "docNamedb";
+            this.docNamedb.Size = new System.Drawing.Size(635, 26);
+            this.docNamedb.TabIndex = 46;
+            this.docNamedb.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
-            // textBox7
+            // timeTb
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(561, 229);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(635, 26);
-            this.textBox7.TabIndex = 47;
+            this.timeTb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeTb.Location = new System.Drawing.Point(561, 229);
+            this.timeTb.Name = "timeTb";
+            this.timeTb.Size = new System.Drawing.Size(635, 26);
+            this.timeTb.TabIndex = 47;
+            this.timeTb.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
-            // textBox8
+            // reasontb
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(561, 269);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(635, 26);
-            this.textBox8.TabIndex = 48;
+            this.reasontb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.reasontb.Location = new System.Drawing.Point(561, 269);
+            this.reasontb.Multiline = true;
+            this.reasontb.Name = "reasontb";
+            this.reasontb.Size = new System.Drawing.Size(635, 26);
+            this.reasontb.TabIndex = 48;
+            this.reasontb.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox25
             // 
@@ -546,12 +556,25 @@
             this.label3.Size = new System.Drawing.Size(817, 210);
             this.label3.TabIndex = 80;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(431, 129);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(814, 689);
+            this.dataGridView1.TabIndex = 91;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
             // ViewRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1352, 830);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.textBox20);
             this.Controls.Add(this.textBox21);
@@ -576,9 +599,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox26);
             this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.reasontb);
+            this.Controls.Add(this.timeTb);
+            this.Controls.Add(this.docNamedb);
             this.Controls.Add(this.uname_tb);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -597,6 +620,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,9 +646,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox uname_tb;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox docNamedb;
+        private System.Windows.Forms.TextBox timeTb;
+        private System.Windows.Forms.TextBox reasontb;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.TextBox textBox26;
         private System.Windows.Forms.TextBox textBox9;
@@ -649,5 +673,6 @@
         private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

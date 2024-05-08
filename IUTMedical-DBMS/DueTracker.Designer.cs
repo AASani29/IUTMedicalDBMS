@@ -97,6 +97,7 @@
             this.button7.TabIndex = 39;
             this.button7.Text = "Profile";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // pictureBox4
             // 
@@ -161,7 +162,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::IUTMedical_DBMS.Properties.Resources.MediEase;
-            this.pictureBox1.Location = new System.Drawing.Point(49, 72);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 72);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

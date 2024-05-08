@@ -29,7 +29,31 @@ namespace IUTMedical_DBMS
 
         private void button7_Click(object sender, EventArgs e)
         {
+            Profile profile = new Profile();
+            profile.Show();
+            this.Hide();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ScheduleAppointment scheduleAppointment = new ScheduleAppointment();
+            scheduleAppointment.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            DueTracker dueTracker = new DueTracker();
+            dueTracker.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ViewRecords viewRecords = new ViewRecords();
+            viewRecords.Show();
+            this.Hide();
         }
     }
 }

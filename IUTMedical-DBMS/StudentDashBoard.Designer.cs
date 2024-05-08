@@ -121,6 +121,7 @@
             this.button3.TabIndex = 37;
             this.button3.Text = "Due Tracker";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox3
             // 
@@ -146,6 +147,7 @@
             this.button2.TabIndex = 35;
             this.button2.Text = "View Records";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -181,6 +183,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Appointment";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -219,7 +222,6 @@
             this.Name = "StudentDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentDashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.StudentDashboard_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

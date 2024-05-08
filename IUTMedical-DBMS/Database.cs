@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using IUTMedical_DBMS;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,14 @@ namespace Bus_Reservation_System
 {
     public sealed class Database
     {
+        private int loggedInUserId; // Variable to store the logged-in user ID
+
+        public int LoggedInUserId
+        {
+            get { return loggedInUserId; }
+            set { loggedInUserId = value; }
+        }
+
         private Database() { }
 
         private static Database instance;
@@ -28,7 +37,7 @@ namespace Bus_Reservation_System
             return instance;
         }
 
-        private static OracleConnection GetDBConnection(string host, int port, String sid, String user, string password)
+        public static OracleConnection GetDBConnection(string host, int port, String sid, String user, string password)
         {
             string connString = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=" + host + ")(PORT=" + port + "))(CONNECT_DATA=(SERVICE_NAME=" + sid + ")));User Id=" + user + ";Password=" + password;
             OracleConnection conn = new OracleConnection();
@@ -87,6 +96,247 @@ namespace Bus_Reservation_System
             }
         }
 
+        public void SaveAppointment(DateTime dateTime, string selectedDoctor, string reason)
+        {
+            try
+            {
+                // Get the logged-in user's ID from the loggedInID variable
+                int userId = LoggedInUserId;
+                int doctorId;
+              
+
+                // Define the insert query
+                string insertQuery = "INSERT INTO Appointments (UserID, doctorID, Doctor, DateTime, Reason) VALUES (:userId, :doctorID, :doctor, :dateTime, :reason)";
+                if (selectedDoctor == "Dr. Fakhar Zaman")
+                {
+                    doctorId = 21;
+                }
+                else if (selectedDoctor == "Dr. Kaniz Fatema")
+                {
+                    doctorId = 22;
+                }
+                else
+                {
+                    // Handle other cases if necessary
+                    doctorId = -1; // Default value or throw an exception
+                }
+                // Open a connection to the database
+                using (OracleConnection con = GetDBConnection("localhost", 1521, "XEPDB1", "sani", "sani9999"))
+                {
+                    con.Open();
+
+                    // Create a command with the insert query
+                    using (OracleCommand command = new OracleCommand(insertQuery, con))
+                    {
+                       
+                        // Add parameters to the command
+                        command.Parameters.Add(":userId", OracleDbType.Int32).Value = userId;
+                        command.Parameters.Add("doctorID", OracleDbType.Int32).Value= doctorId;
+                        command.Parameters.Add(":doctor", OracleDbType.Varchar2).Value = selectedDoctor;
+                        command.Parameters.Add(":dateTime", OracleDbType.Date).Value = dateTime;
+                        command.Parameters.Add(":reason", OracleDbType.Varchar2).Value = reason;
+
+                        // Execute the command to insert the appointment
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                // Show a success message
+                MessageBox.Show("Appointment scheduled successfully!");
+            }
+            catch (Exception ex)
+            {
+                // Show an error message if an exception occurs
+                MessageBox.Show("An error occurred while saving the appointment: " + ex.Message);
+            }
+        }
+
+
+
+
+        public List<string> ShowAppointments()
+        {
+            List<string> appointments = new List<string>();
+            try
+            {
+                con.Open();
+                string sql = "SELECT AppointmentID, DateTime, Doctor, Reason FROM Appointments where userid="+LoggedInUserId;
+                OracleCommand command = new OracleCommand(sql, con);
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int appointmentID = reader.GetInt32(reader.GetOrdinal("AppointmentID"));
+                    DateTime dateTime = reader.GetDateTime(reader.GetOrdinal("DateTime"));
+                    string doctor = reader.GetString(reader.GetOrdinal("Doctor"));
+                    string reason = reader.GetString(reader.GetOrdinal("Reason"));
+
+                    string appointmentInfo = $"Appointment ID: {appointmentID}, Date and Time: {dateTime}, Doctor: {doctor}, Reason: {reason}";
+                    appointments.Add(appointmentInfo);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while fetching appointments: {ex.Message}");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return appointments;
+        }
+
+        // Database.cs
+
+        public List<Appointment> GetAppointments()
+        {
+            List<Appointment> appointments = new List<Appointment>();
+            try
+            {
+                con.Open();
+                string sql = "SELECT AppointmentID, DateTime, Doctor, Reason FROM Appointments where userid="+ LoggedInUserId;
+                OracleCommand command = new OracleCommand(sql, con);
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int appointmentID = reader.GetInt32(reader.GetOrdinal("AppointmentID"));
+                    DateTime dateTime = reader.GetDateTime(reader.GetOrdinal("DateTime"));
+                    string doctor = reader.GetString(reader.GetOrdinal("Doctor"));
+                    string reason = reader.GetString(reader.GetOrdinal("Reason"));
+
+                    Appointment appointment = new Appointment(appointmentID, dateTime, doctor, reason);
+                    appointments.Add(appointment);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while fetching appointments: {ex.Message}");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return appointments;
+        }
+
+        public List<string> GetUserNameById()
+        {
+            List<string> usernames = new List<string>();
+
+            try
+            {
+                con.Open();
+                string sql = "SELECT username FROM users WHERE userid ="+LoggedInUserId;
+                OracleCommand command = new OracleCommand(sql, con);
+                
+
+                OracleDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string name = reader.GetString(reader.GetOrdinal("username"));
+                    usernames.Add(name);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while fetching usernames: {ex.Message}");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+
+            return usernames;
+        }
+
+
+
+        //public Appointment GetAppointment(int appointmentID)
+        //{
+        //    Appointment appointment = null;
+        //    try
+        //    {
+        //        con.Open();
+        //        string sql = "SELECT * FROM Appointments WHERE AppointmentID = :appointmentID";
+        //        using (OracleCommand command = new OracleCommand(sql, con))
+        //        {
+        //            command.Parameters.Add(":appointmentID", OracleDbType.Int32).Value = appointmentID;
+        //            OracleDataReader reader = command.ExecuteReader();
+        //            if (reader.Read())
+        //            {
+        //                appointment = new Appointment
+        //                {
+        //                    AppointmentID = reader.GetInt32(reader.GetOrdinal("AppointmentID")),
+        //                    PatientName = reader.GetString(reader.GetOrdinal("PatientName")),
+        //                    Doctor = reader.GetString(reader.GetOrdinal("Doctor")),
+        //                    DateTime = reader.GetDateTime(reader.GetOrdinal("DateTime")),
+        //                    Reason = reader.GetString(reader.GetOrdinal("Reason"))
+        //                };
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Handle exceptions
+        //        Console.WriteLine("An error occurred: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        if (con.State == ConnectionState.Open)
+        //        {
+        //            con.Close();
+        //        }
+        //    }
+        //    return appointment;
+        //}
+
+        //public List<string> FetchAllStation()
+        //{
+        //    List<string> Stations = new List<string>();
+        //    try
+        //    {
+        //        con.Open();
+        //        string sql = "select * from Station";
+        //        OracleCommand oracleCommand = new OracleCommand();
+
+        //        oracleCommand.CommandText = sql;
+        //        oracleCommand.Connection = con;
+
+
+
+
+        //        // Fill the DataTable with the results of the SELECT query
+        //        OracleDataReader reader = oracleCommand.ExecuteReader();
+
+
+        //        while (reader.Read())
+        //        {
+        //            Stations.Add(reader[0].ToString());
+        //        }
+
+
+        //        con.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //        con.Close();
+        //    }
+
+
+        //    return Stations;
+        //}
 
 
         //public bool newReceptionist(Receptionist receptionist)
@@ -349,7 +599,30 @@ namespace Bus_Reservation_System
         //    }
 
         //}
-
+        //public void LoadAppointmentInfo(DataGridView dataGrid)
+        //{
+        //    try
+        //    {
+        //        con.Open();
+        //        string sql = "SELECT * FROM appointments";
+        //        OracleCommand oracleCommand = new OracleCommand(sql, con);
+        //        DataTable dataTable = new DataTable();
+        //        OracleDataReader reader = oracleCommand.ExecuteReader();
+        //        dataTable.Load(reader);
+        //        dataGrid.DataSource = dataTable;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("An error occurred: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        if (con.State == ConnectionState.Open)
+        //        {
+        //            con.Close();
+        //        }
+        //    }
+        //}
         //public void LoadBusInfo(DataGridView dataGrid)
         //{
         //    try

@@ -56,7 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label12 = new System.Windows.Forms.Label();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
@@ -65,6 +64,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -382,16 +383,6 @@
             this.label11.TabIndex = 51;
             this.label11.Text = "+ve";
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox5.Location = new System.Drawing.Point(425, 537);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(281, 66);
-            this.textBox5.TabIndex = 52;
-            this.textBox5.Text = "Imtiaz Risat";
-            // 
             // progressBar1
             // 
             this.progressBar1.BackColor = System.Drawing.Color.Black;
@@ -479,12 +470,23 @@
             this.label16.TabIndex = 60;
             this.label16.Text = "Due";
             // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(413, 545);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(350, 51);
+            this.textBox5.TabIndex = 61;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged_2);
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1330, 774);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label15);
@@ -493,7 +495,6 @@
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label10);
@@ -555,7 +556,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ProgressBar progressBar2;
@@ -564,5 +564,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label16;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

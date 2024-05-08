@@ -29,8 +29,9 @@ namespace IUTMedical_DBMS
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           // Hide();
-           // new RegForm().Show();
+            Hide();
+            Register RegForm = new Register();
+            RegForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,35 +48,46 @@ namespace IUTMedical_DBMS
 
                 // Assuming db is an instance of your Database class that encapsulates Oracle connection and operations
                 Database db = Database.GetInstance();
-                OracleConnection connection = db.Connection; 
+                OracleConnection connection = db.Connection;
 
                 // Query the database to retrieve the user record with the entered username
-                string query = "SELECT Password FROM Users WHERE Username = :Username";
+                string query = "SELECT UserID, Password FROM Users WHERE Username = :Username";
                 OracleCommand command = new OracleCommand(query, connection);
                 command.Parameters.Add(":Username", OracleDbType.NVarchar2).Value = enteredUsername;
 
-                // Execute the query and retrieve the password from the database
+                // Execute the query and retrieve the password and user ID from the database
                 connection.Open();
-                string storedPassword = (string)command.ExecuteScalar();
-                connection.Close();
+                OracleDataReader reader = command.ExecuteReader();
 
-                // Compare the entered password with the stored password
-                if (storedPassword != null && storedPassword == enteredPassword)
+                if (reader.Read())
                 {
-                   
-                     MessageBox.Show("Login successful!");
+                    string storedPassword = reader.GetString(1);
+                    int userId = reader.GetInt32(0); // Retrieve user ID from the database
 
-                    //this.Close();
-                    // Proceed with further actions, such as opening a new form or granting access
-                    StudentDashboard studentDashboardForm = new StudentDashboard();
-                    studentDashboardForm.Show();
-                    
-                    
+                    // Compare the entered password with the stored password
+                    if (storedPassword != null && storedPassword == enteredPassword)
+                    {
+                        // Store the user ID in the Database class instance
+                        db.LoggedInUserId = userId;
+
+                        MessageBox.Show("Login successful !"+ userId);
+
+                        // Proceed with further actions, such as opening a new form or granting access
+                        StudentDashboard studentDashboardForm = new StudentDashboard();
+                        studentDashboardForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password. Please try again.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid username or password. Please try again.");
+                    MessageBox.Show("User not found. Please check your username.");
                 }
+
+                connection.Close();
             }
             catch (Exception ex)
             {
