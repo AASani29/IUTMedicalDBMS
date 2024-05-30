@@ -1,4 +1,4 @@
-﻿using Bus_Reservation_System;
+﻿using Hospital_Management_System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +35,35 @@ namespace IUTMedical_DBMS
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            prescriptionG prescriptiong = new prescriptionG();
+            prescriptiong.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

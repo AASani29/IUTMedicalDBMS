@@ -1,4 +1,4 @@
-﻿using Bus_Reservation_System;
+﻿using Hospital_Management_System;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;

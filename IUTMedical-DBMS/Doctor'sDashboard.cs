@@ -22,5 +22,17 @@ namespace IUTMedical_DBMS
             AppointmentList appointmentList = new AppointmentList();
             appointmentList.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
     }
 }

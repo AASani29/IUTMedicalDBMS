@@ -57,6 +57,7 @@
             this.button8.TabIndex = 42;
             this.button8.Text = "LogOut";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -134,6 +135,7 @@
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 39;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox5
             // 

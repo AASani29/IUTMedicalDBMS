@@ -1,4 +1,4 @@
-﻿using Bus_Reservation_System;
+﻿using Hospital_Management_System;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ namespace IUTMedical_DBMS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+                this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,24 +52,34 @@ namespace IUTMedical_DBMS
                 if (enteredUsername == "doctor1" && enteredPassword == "doctor1")
                 {
                     db.LoggedInUserId = 21;
-                    
-                    MessageBox.Show("Login successful as a Doctor!"+db.LoggedInUserId);
+
+                    MessageBox.Show("Login successful as a Doctor!" + db.LoggedInUserId);
                     Doctor_sDashboard doctor_SDashboard = new Doctor_sDashboard();
                     doctor_SDashboard.Show();
                     this.Hide();
 
 
                 }
-                else if(enteredUsername == "doctor2" && enteredPassword == "doctor2")
+                else if (enteredUsername == "doctor2" && enteredPassword == "doctor2")
                 {
                     db.LoggedInUserId = 22;
 
-                    MessageBox.Show("Login successful as a Doctor!"+db.LoggedInUserId);
+                    MessageBox.Show("Login successful as a Doctor!" + db.LoggedInUserId);
                     Doctor_sDashboard doctor_SDashboard = new Doctor_sDashboard();
                     doctor_SDashboard.Show();
                     this.Hide();
 
                 }
+                else if (enteredUsername == "admin" && enteredPassword == "admin")
+                {
+                    
+                    db.LoggedInUserId = 23;
+                    MessageBox.Show("Login successful as an Admin!" + db.LoggedInUserId);
+                    AdminDashboard adminDashboard = new AdminDashboard();
+                    adminDashboard.Show();
+                    this.Hide();
+                }
+          
                 else
                 {
 

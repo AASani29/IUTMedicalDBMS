@@ -1,4 +1,4 @@
-﻿using Bus_Reservation_System;
+﻿using Hospital_Management_System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -104,6 +104,19 @@ namespace IUTMedical_DBMS
             ViewRecords viewRecords1 = new ViewRecords();
             viewRecords1.Show();
             this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            View_Prescriptions viewRecords = new View_Prescriptions();
+            viewRecords.Show();
         }
     }
 }

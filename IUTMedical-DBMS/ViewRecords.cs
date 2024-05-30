@@ -1,4 +1,4 @@
-﻿using Bus_Reservation_System;
+﻿using Hospital_Management_System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Bus_Reservation_System.Database;
+using static Hospital_Management_System.Database;
 
 namespace IUTMedical_DBMS
 {
@@ -36,33 +36,7 @@ namespace IUTMedical_DBMS
 
         }
 
-        //    Appointment appointment = db.GetAppointment(appointmentID);
-
-        //    void LoadAppointmentInfo()
-        //    {
-        //        Appointment appointment = db.GetAppointment(appointmentID);
-        //        if (appointment != null)
-        //        {
-        //            ShowAppointmentDetails(appointment);
-        //        }
-        //        else
-        //        {
-        //            ShowNoAppointmentsMessage();
-        //        }
-        //    }
-        //    private void ShowAppointmentDetails(Appointment appointment)
-        //    {
-        //        uname_tb.Text = appointment.PatientName;
-        //        docNamedb.Text = appointment.Doctor;
-        //        timeTb.Text = appointment.DateTime.ToString();
-        //        reasontb.Text = appointment.Reason;
-        //    }
-        //}
-
-        //private void ShowNoAppointmentsMessage()
-        //{
-        //    MessageBox.Show("No appointments found.");
-        //}
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -139,6 +113,19 @@ namespace IUTMedical_DBMS
             Profile profile = new Profile();
             profile.Show();
             this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            View_Prescriptions viewRecords = new View_Prescriptions();
+            viewRecords.Show();
         }
     }
 }
