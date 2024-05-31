@@ -130,7 +130,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(61, 718);
+            this.button8.Location = new System.Drawing.Point(64, 695);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 50);
             this.button8.TabIndex = 40;
@@ -146,7 +146,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(61, 662);
+            this.button7.Location = new System.Drawing.Point(64, 639);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 50);
             this.button7.TabIndex = 39;
@@ -256,7 +256,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(419, 606);
+            this.label3.Location = new System.Drawing.Point(421, 561);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 33);
             this.label3.TabIndex = 37;
@@ -298,7 +298,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(423, 520);
+            this.label6.Location = new System.Drawing.Point(423, 484);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 10);
             this.label6.TabIndex = 42;
@@ -464,10 +464,10 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.textBox6.Location = new System.Drawing.Point(427, 642);
+            this.textBox6.Location = new System.Drawing.Point(425, 599);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(281, 44);
+            this.textBox6.Size = new System.Drawing.Size(281, 68);
             this.textBox6.TabIndex = 59;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -476,7 +476,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.DarkGray;
-            this.label16.Location = new System.Drawing.Point(421, 692);
+            this.label16.Location = new System.Drawing.Point(421, 669);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 33);
             this.label16.TabIndex = 60;
@@ -485,7 +485,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(413, 545);
+            this.textBox5.Location = new System.Drawing.Point(422, 507);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(350, 51);
@@ -497,8 +497,8 @@
             this.pictureBox5.Image = global::IUTMedical_DBMS.Properties.Resources.you_guys_are_getting_paid;
             this.pictureBox5.Location = new System.Drawing.Point(425, 152);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(338, 354);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox5.Size = new System.Drawing.Size(303, 318);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
             // 
@@ -509,7 +509,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1290, 12);
+            this.button4.Location = new System.Drawing.Point(1262, 22);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 36;

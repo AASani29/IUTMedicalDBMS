@@ -64,17 +64,12 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -139,7 +134,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(59, 735);
+            this.button8.Location = new System.Drawing.Point(63, 701);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 50);
             this.button8.TabIndex = 42;
@@ -155,7 +150,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(59, 679);
+            this.button7.Location = new System.Drawing.Point(63, 645);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 50);
             this.button7.TabIndex = 41;
@@ -472,33 +467,6 @@
             this.label2.Size = new System.Drawing.Size(817, 210);
             this.label2.TabIndex = 69;
             // 
-            // textBox19
-            // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(657, 767);
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(158, 22);
-            this.textBox19.TabIndex = 90;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Location = new System.Drawing.Point(457, 767);
-            this.textBox20.Multiline = true;
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(158, 22);
-            this.textBox20.TabIndex = 89;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(561, 729);
-            this.textBox21.Multiline = true;
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(635, 26);
-            this.textBox21.TabIndex = 88;
-            // 
             // textBox22
             // 
             this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -522,17 +490,6 @@
             this.textBox24.Name = "textBox24";
             this.textBox24.Size = new System.Drawing.Size(635, 26);
             this.textBox24.TabIndex = 85;
-            // 
-            // textBox27
-            // 
-            this.textBox27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.Location = new System.Drawing.Point(458, 726);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(73, 25);
-            this.textBox27.TabIndex = 84;
-            this.textBox27.Text = "Reason";
             // 
             // textBox28
             // 
@@ -567,14 +524,6 @@
             this.textBox30.TabIndex = 81;
             this.textBox30.Text = "Name";
             // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(428, 589);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(817, 210);
-            this.label3.TabIndex = 80;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
@@ -583,7 +532,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(814, 670);
+            this.dataGridView1.Size = new System.Drawing.Size(814, 622);
             this.dataGridView1.TabIndex = 91;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -594,7 +543,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1312, 12);
+            this.button4.Location = new System.Drawing.Point(1280, 27);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 36;
@@ -607,17 +556,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1352, 830);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
             this.Controls.Add(this.textBox22);
             this.Controls.Add(this.textBox23);
             this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox27);
             this.Controls.Add(this.textBox28);
             this.Controls.Add(this.textBox29);
             this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox11);
@@ -695,17 +639,12 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
         private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TextBox textBox23;
         private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox29;
         private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button9;

@@ -189,7 +189,40 @@ namespace Hospital_Management_System
             }
             return appointments;
         }
+        public List<Appointment> GetAppointmentsAdmin()
+        {
+            List<Appointment> appointments = new List<Appointment>();
+            try
+            {
+                con.Open();
+                string sql = "SELECT AppointmentID, DateTime, Doctor, Reason FROM Appointments";
+                OracleCommand command = new OracleCommand(sql, con);
+                OracleDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    int appointmentID = reader.GetInt32(reader.GetOrdinal("AppointmentID"));
+                    DateTime dateTime = reader.GetDateTime(reader.GetOrdinal("DateTime"));
+                    string doctor = reader.GetString(reader.GetOrdinal("Doctor"));
+                    string reason = reader.GetString(reader.GetOrdinal("Reason"));
+
+                    Appointment appointment = new Appointment(appointmentID, dateTime, doctor, reason);
+                    appointments.Add(appointment);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while fetching appointments: {ex.Message}");
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return appointments;
+        }
         // Database.cs
 
         public List<Appointment> GetAppointments()
@@ -426,6 +459,36 @@ namespace Hospital_Management_System
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while saving the refer request: " + ex.Message);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public void ApproveDue(String requidestId)
+        {
+            string approveQuery = "DELETE FROM referrequest WHERE REQUESTID = " + requidestId;
+            try
+            {
+                con.Open();
+
+                using (OracleCommand command = new OracleCommand(approveQuery, con))
+                {
+                    command.Parameters.Add(":requestId", OracleDbType.Decimal).Value = requidestId;
+                   
+
+                    command.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("User due updated successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while updating the user due: " + ex.Message);
             }
             finally
             {

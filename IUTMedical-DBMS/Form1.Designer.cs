@@ -47,8 +47,8 @@
             this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.Location = new System.Drawing.Point(758, 459);
+            this.button2.ForeColor = System.Drawing.Color.Crimson;
+            this.button2.Location = new System.Drawing.Point(702, 486);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 40);
             this.button2.TabIndex = 29;
@@ -146,7 +146,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1312, 12);
+            this.button1.Location = new System.Drawing.Point(1268, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 27);
             this.button1.TabIndex = 34;
@@ -169,7 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1352, 830);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);

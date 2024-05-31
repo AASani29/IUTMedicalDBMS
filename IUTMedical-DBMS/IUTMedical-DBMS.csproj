@@ -121,6 +121,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAppointments.Designer.cs">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrescriptionClass.cs" />
     <Compile Include="prescriptionG.cs">
       <SubType>Form</SubType>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAppointments.resx">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prescriptionG.resx">
       <DependentUpon>prescriptionG.cs</DependentUpon>
@@ -265,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vecteezy_prescription-icon-design_289006491.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9275006.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

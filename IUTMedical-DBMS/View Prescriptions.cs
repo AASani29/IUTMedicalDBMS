@@ -69,5 +69,12 @@ namespace IUTMedical_DBMS
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            profile.Show();
+            this.Close();
+        }
     }
 }

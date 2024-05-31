@@ -112,7 +112,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(61, 736);
+            this.button8.Location = new System.Drawing.Point(76, 683);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 50);
             this.button8.TabIndex = 40;
@@ -128,7 +128,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(61, 680);
+            this.button7.Location = new System.Drawing.Point(76, 627);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 50);
             this.button7.TabIndex = 39;
@@ -300,9 +300,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button6.Location = new System.Drawing.Point(948, 587);
+            this.button6.Location = new System.Drawing.Point(925, 587);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 33);
+            this.button6.Size = new System.Drawing.Size(141, 68);
             this.button6.TabIndex = 37;
             this.button6.Text = "Schedule";
             this.button6.UseVisualStyleBackColor = false;
@@ -314,9 +314,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Crimson;
-            this.button5.Location = new System.Drawing.Point(683, 587);
+            this.button5.Location = new System.Drawing.Point(652, 587);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(207, 33);
+            this.button5.Size = new System.Drawing.Size(229, 68);
             this.button5.TabIndex = 38;
             this.button5.Text = "View Appointments";
             this.button5.UseVisualStyleBackColor = false;
@@ -329,7 +329,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1312, 12);
+            this.button4.Location = new System.Drawing.Point(1253, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 35;

@@ -51,5 +51,19 @@ namespace IUTMedical_DBMS
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ViewAppointments viewAppointments = new ViewAppointments(); 
+            viewAppointments.ShowDialog();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            String requestId=textBox3.Text;
+            db.ApproveDue(requestId);
+
+        }
     }
 }

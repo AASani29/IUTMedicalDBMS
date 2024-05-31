@@ -81,5 +81,19 @@ namespace IUTMedical_DBMS
         {
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

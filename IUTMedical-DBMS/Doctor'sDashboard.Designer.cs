@@ -51,7 +51,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(61, 698);
+            this.button8.Location = new System.Drawing.Point(61, 672);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(187, 50);
             this.button8.TabIndex = 42;
@@ -67,12 +67,13 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Montserrat", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(61, 642);
+            this.button7.Location = new System.Drawing.Point(61, 616);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(187, 50);
             this.button7.TabIndex = 41;
             this.button7.Text = "Profile";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button1
             // 
@@ -130,7 +131,7 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1290, 12);
+            this.button4.Location = new System.Drawing.Point(1274, 24);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(28, 27);
             this.button4.TabIndex = 39;
@@ -140,7 +141,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::IUTMedical_DBMS.Properties.Resources.HeroImg;
-            this.pictureBox5.Location = new System.Drawing.Point(276, -2);
+            this.pictureBox5.Location = new System.Drawing.Point(314, -2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(1459, 849);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,6 +158,7 @@
             this.Controls.Add(this.pictureBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Doctor_sDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Doctor_sDashboard";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

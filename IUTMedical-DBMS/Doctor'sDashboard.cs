@@ -21,6 +21,7 @@ namespace IUTMedical_DBMS
         {
             AppointmentList appointmentList = new AppointmentList();
             appointmentList.Show();
+            this.Close();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -32,7 +33,14 @@ namespace IUTMedical_DBMS
         {
             Form1 form1 = new Form1();
             form1.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DoctorProfile doctorProfile = new DoctorProfile();
+            doctorProfile.Show();
+            this.Close();
         }
     }
 }

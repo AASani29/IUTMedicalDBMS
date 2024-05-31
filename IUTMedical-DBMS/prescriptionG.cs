@@ -88,5 +88,22 @@ namespace IUTMedical_DBMS
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            DoctorProfile doctorProfile = new DoctorProfile();  
+            doctorProfile.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

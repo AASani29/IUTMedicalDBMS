@@ -43,6 +43,7 @@
             this.gender_comboBox1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_email = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,10 +63,10 @@
             this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.button2.Location = new System.Drawing.Point(785, 611);
+            this.button2.ForeColor = System.Drawing.Color.MediumTurquoise;
+            this.button2.Location = new System.Drawing.Point(759, 601);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 40);
+            this.button2.Size = new System.Drawing.Size(136, 47);
             this.button2.TabIndex = 38;
             this.button2.Text = "Register";
             this.button2.UseVisualStyleBackColor = false;
@@ -134,7 +135,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1290, 12);
+            this.button1.Location = new System.Drawing.Point(1266, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(28, 27);
             this.button1.TabIndex = 43;
@@ -208,12 +209,25 @@
             this.txt_email.Size = new System.Drawing.Size(315, 26);
             this.txt_email.TabIndex = 49;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.Location = new System.Drawing.Point(621, 607);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(96, 41);
+            this.linkLabel1.TabIndex = 51;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1330, 774);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.gender_comboBox1);
@@ -255,5 +269,6 @@
         private System.Windows.Forms.ComboBox gender_comboBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_email;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
